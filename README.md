@@ -9,7 +9,7 @@
 ![Screenshot](screenshots/rofi.png)
 
 ### Rofi network manager :
-![Screenshot](screenshots/rofi-wifi.png)
+![Screenshot](screenshots/rofi-wifi~2.png)
 
 ### Waybar:
 ![Screenshot](screenshots/waybar.png)
