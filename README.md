@@ -31,13 +31,13 @@ Here is all the information about my Laptop:
 | 📚 Entry                       | ✨ App                                                                                                                                       |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | **OS**                         |  [Arch Linux](https://archlinux.org/)                                                                                                      |
-| **Package Manager**            | [pacman](https://wiki.archlinux.org/title/Pacman) [:gear:]                                                              |
-| **AUR Helper**                 |  [yay](https://github.com/Jguer/yay) [:gear:]                                                                            |
+| **Package Manager**            | [pacman](https://wiki.archlinux.org/title/Pacman)                                                              |
+| **AUR Helper**                 |  [yay](https://github.com/Jguer/yay)                                                                          |
 | **Display Manager**            | [sddm](https://sr.ht/~kennylevinsen/greetd/) (with [corner](https://github.com/apognu/tuigreet))                                         |
 | **Window Manager**             |  [hyprland](https://hyprland.org/) [:gear:](../.config/hypr/)                                                                              |
 | **Notification Daemon/Center** | [dunst](https://github.com/ErikReider/SwayNotificationCenter)                                               |
 | **Bar**                        |  [waybar](https://github.com/Alexays/Waybar) [:gear:](../.config/waybar/)                                                                  |
-| **Application Launcher**       | [rofi](https://github.com/lbonn/rofi) [:gear:]                                                                          |
+| **Application Launcher**       | [rofi](https://github.com/lbonn/rofi)                                                                       |
 | **Firewall**                   | [ufw](https://wiki.archlinux.org/title/ufw)                                                                                                  |
 | **Clipboard Manager**          | [wl-clipboard](https://github.com/bugaevc/wl-clipboard)                            |
 | **Wallpaper Switcher**         | [swww](https://github.com/Horus645/swww)                                                                                                     |
