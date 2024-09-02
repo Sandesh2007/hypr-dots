@@ -5,6 +5,12 @@
 ### Desktop:
 ![Screenshot](screenshots/Shot-2024-09-02-133606.png)
 
+### Firefox [shyfox-theme] :
+![Screenshot](screenshots/firefox.png)
+
+  #### Firefox / waybar [with other wallpaper] :
+  ![Screenshot](screenshots/firefox-cw.png)
+
 ### Rofi Launcher:
 ![Screenshot](screenshots/rofi.png)
 
@@ -16,6 +22,9 @@
 
 ### Rofi Screenshot :
 ![Screenshot](screenshots/rofi-screenshot.png)
+
+### Rofi Powermenu :
+![Screenshot](screenshots/rofi-powerMenu.png)
 
 ### Wlogout :
 
