@@ -31,16 +31,15 @@ Here is all the information about my Laptop:
 | 📚 Entry                       | ✨ App                                                                                                                                       |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | **OS**                         |  [Arch Linux](https://archlinux.org/)                                                                                                      |
-| **Package Manager**            | [pacman](https://wiki.archlinux.org/title/Pacman) [:gear:](../.config/pacman/)                                                               |
-| **AUR Helper**                 |  [yay](https://github.com/Jguer/yay) [:gear:](../.config/yay/)                                                                             |
-| **Display Manager**            | [greetd](https://sr.ht/~kennylevinsen/greetd/) (with [tuigreet](https://github.com/apognu/tuigreet))                                         |
+| **Package Manager**            | [pacman](https://wiki.archlinux.org/title/Pacman) [:gear:]                                                              |
+| **AUR Helper**                 |  [yay](https://github.com/Jguer/yay) [:gear:]                                                                            |
+| **Display Manager**            | [sddm](https://sr.ht/~kennylevinsen/greetd/) (with [corner](https://github.com/apognu/tuigreet))                                         |
 | **Window Manager**             |  [hyprland](https://hyprland.org/) [:gear:](../.config/hypr/)                                                                              |
-| **Notification Daemon/Center** | [dunst](https://github.com/ErikReider/SwayNotificationCenter) [:gear:](../.config/swaync/)                                                  |
+| **Notification Daemon/Center** | [dunst](https://github.com/ErikReider/SwayNotificationCenter)                                               |
 | **Bar**                        |  [waybar](https://github.com/Alexays/Waybar) [:gear:](../.config/waybar/)                                                                  |
-| **Audio Daemon**               | [pipewire](https://pipewire.org/)                                                                                                            |
-| **Application Launcher**       | [rofi](https://github.com/lbonn/rofi) [:gear:](../.config/rofi/)                                                                          |
+| **Application Launcher**       | [rofi](https://github.com/lbonn/rofi) [:gear:]                                                                          |
 | **Firewall**                   | [ufw](https://wiki.archlinux.org/title/ufw)                                                                                                  |
-| **Clipboard Manager**          | [wl-clipboard](https://github.com/bugaevc/wl-clipboard) (with [cliphist](https://github.com/sentriz/cliphist))                               |
+| **Clipboard Manager**          | [wl-clipboard](https://github.com/bugaevc/wl-clipboard)                            |
 | **Wallpaper Switcher**         | [swww](https://github.com/Horus645/swww)                                                                                                     |
 | **Lock Screen**                | [hyprlock](https://github.com/hyprwm/hyprlock) [:gear:](../.config/hypr/hyprlock.conf)                                                       |
 | **Idle Timeout**               | [hypridle](https://github.com/hyprwm/hypridle) [:gear:](../.config/hypr/hypridle.conf)                                                       |
@@ -54,10 +53,10 @@ Here is all the information about my Laptop:
 
 | 📚 Entry                 | ✨ App                                                                                                                  |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| **Music Player**         | [Spotify](https://open.spotify.com/) (patched with [Spicetify](https://spicetify.app/)) [:gear:](../.config/spicetify/) |
-| **Fallback Text Editor** | [Vscode](https://vscodium.com/) [:gear:](../.config/VSCodium/User/)                                                   |
-| **Web Browser**          | [Firefox](https://floorp.app/en/) [:gear:](../.config/browser/)                                                       |
-| **PDF Viewer**           | [Zathura](https://pwmt.org/projects/zathura/) [:gear:](../.config/zathura/)                                             |
+| **Music Player**         | [Spotify](https://open.spotify.com/) (patched with [Spicetify](https://spicetify.app/)) [:gear:]|
+| **Fallback Text Editor** | [Vscode](https://vscodium.com/) [:gear:]                                                 |
+| **Web Browser**          | [Firefox](https://floorp.app/en/) [:gear:]                                                       |
+| **PDF Viewer**           | [Zathura](https://pwmt.org/projects/zathura/) [:gear:]                                             |
 | **File Manager**         | [Thunar](https://community.linuxmint.com/software/view/nemo)                                                              |
 
 </details>
