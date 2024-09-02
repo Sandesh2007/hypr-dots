@@ -9,7 +9,17 @@
 ![Screenshot](screenshots/rofi.png)
 
 ### Rofi network manager :
-![Screenshot](screenshots/rofi-wifi~2.png)
+![Screenshot](screenshots/rofi-wifi.png)
+
+### Rofi Wallpaper selector :
+![Screenshot](screenshots/rofi-wallpaper.png)
+
+### Rofi Screenshot :
+![Screenshot](screenshots/rofi-screenshot.png)
+
+### Wlogout :
+
+![Screenshot](screenshots/wlogout.png)
 
 ### Waybar:
 ![Screenshot](screenshots/waybar.png)
