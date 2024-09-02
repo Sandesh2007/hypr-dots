@@ -1,5 +1,5 @@
 # hypr-dots
- my hyprland configs
+ My minimal hyprland with Everforest gtk theme, Gruvbox plus icons and pywal. nothing fancy! 
 
 ## Screenshots
 ### Desktop:
@@ -10,3 +10,6 @@
 
 ### Rofi network manager :
 ![Screenshot](screenshots/rofi-wifi.png)
+
+### Waybar:
+![Screenshot](screenshots/waybar.png)
