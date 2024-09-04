@@ -8,6 +8,7 @@ configuration {
 
 @import "shared.rasi"
 
+
 window {
     transparency:                "real";
     location:                    center;
