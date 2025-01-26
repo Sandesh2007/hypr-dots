@@ -12,6 +12,7 @@
 
 sleep 1
 clear
+spotify=spicetify
 aur_helper=yay
 figlet -f smslant "Updates"
 echo
@@ -60,7 +61,7 @@ if [[ $(_isInstalledAUR "timeshift") == "0" ]] ;then
 fi
 
 $aur_helper --noconfirm
-
+$spotify update
 if [[ $(_isInstalledAUR "flatpak") == "0" ]] ;then
     flatpak upgrade
 fi

@@ -1,0 +1,1 @@
+hyprctl dispatch workspace 4; vboxmanage startvm win11

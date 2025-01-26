@@ -1,0 +1,15 @@
+/* load pywal colors */
+@import url("/home/sandesh/.cache/wal/colors-waybar.css");
+
+/* Define some custom colors */
+@define-color bg @background;
+@define-color fg @foreground;
+@define-color textcolor1 #000000;
+@define-color workspacesbackground2 #CCCCCC;
+
+@define-color light-aqua @color11;
+@define-color light-blue @color10;
+@define-color light-green @color12;
+@define-color light-purple @color5;
+@define-color light-yellow @color6;
+@define-color light-orange @color7;

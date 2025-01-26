@@ -13,27 +13,19 @@ if [[ "$1" == "rofi" ]]; then
     options="$(hyprshade ls)\noff"
     
     # Open rofi
-    choice=$(echo -e "$options" | rofi -dmenu -replace -config ~/.config/rofi/config-hyprshade.rasi -i -no-show-icons -l 4 -width 30 -p "Hyprshade") 
-    if [ ! -z $choice ] ;then
-        echo "hyprshade_filter=\"$choice\"" > ~/.config/ml4w/settings/hyprshade.sh
+    choice=$(echo -e "$options" | rofi -dmenu -replace -config ~/.config/hypr/rofi-themes/hyprshade.rasi  -l 4 -width 30 -p "Hyprshade") 
         if [ "$choice" == "off" ] ;then
             hyprshade off
             notify-send "Hyprshade deactivated"
             echo ":: hyprshade turned off"            
         else
-            dunstify "Changing Hyprshade to $choice" "Toggle shader with SUPER+SHIFT+S"
+            dunstify "Changing Hyprshade to $choice"
         fi
-    fi
     
 else
 
     # Toggle Hyprshade based on the selected filter
     hyprshade_filter="blue-light-filter"
-
-    # Check if hyprshade.sh settings file exists and load
-    if [ -f ~/.config/ml4w/settings/hyprshade.sh ] ;then
-        source ~/.config/ml4w/settings/hyprshade.sh
-    fi
 
     # Toggle Hyprshade
     if [ "$hyprshade_filter" != "off" ] ;then

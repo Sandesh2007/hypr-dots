@@ -1,0 +1,214 @@
+@import url("/home/sandesh/.cache/wal/colors-waybar.css");
+/*@import url ("./colors.css");*/
+* {
+	border: none;
+	border-radius: 0;
+    font-family: "JetbrainsMono NF", monospace;
+  font-weight: bold;
+	font-size: 14px;
+	min-height: 0;
+}
+
+window#waybar {
+	background: transparent;
+  color: @color6;
+}
+
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+tooltip {
+    background: @background;
+    border-width: 2px;
+    border-style: solid;
+    border-color: @color4;
+}
+
+#window {
+	margin-top: 6px;
+  margin-right: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+  border-bottom-width: 2px;
+  border-bottom-color: @color0;
+  border-bottom-style: solid;
+
+	transition: none;
+    color: @color6;
+	background: @background;
+}
+
+#workspaces button {
+    padding: 5px;
+    color: @color8;
+}
+
+#workspaces button.active {
+    border-radius: 5px;
+    border-bottom-width: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-color: @color8;
+    border-bottom-style: solid;
+    color: @foreground;
+}
+
+#workspaces button.focused {
+    color: @color5;
+    background: @color1;
+}
+
+#workspaces button.urgent {
+    color: @background;
+    background: @color2;
+}
+
+#workspaces button:hover {
+    background: @background;
+    color: @color6;
+}
+
+#workspaces,
+#network,
+#pulseaudio,
+#battery,
+#backlight,
+#clock,
+#memory,
+#cpu,
+#tray,
+#window,
+#custom-launcher,
+#custom-power,
+#custom-updates,
+#custom-spotify {
+	padding-left: 10px;
+	padding-right: 10px;
+  	margin-top: 6px;
+	border-radius: 8px;
+  	border-bottom-width: 2px;
+  	border-bottom-style: solid;
+  	border-bottom-color: @color0;
+	background: @background;
+}
+
+#network {
+	margin-left: 8px;
+	transition: none;
+	color: #fff;
+}
+
+#pulseaudio {
+	margin-left: 8px;
+  margin-right: 0px;
+	border-radius: 8px 0 0 8px;
+
+	transition: none;
+	color: #fff;
+}
+
+#battery {
+	margin-left: 8px;
+	transition: none;
+	color: #fff;
+}
+
+#battery.charging, #battery.plugged {
+	color: #fff;
+    color: @color10
+}
+
+#battery.critical:not(.charging) {
+    color: @color9;
+    color: @color15;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: @color13;
+        color: @color11;
+    }
+}
+
+#backlight {
+	margin-left: 8px;
+	border-radius: 8px 0 0 8px;
+	transition: none;
+	color: #fff;
+}
+#clock {
+	margin-left: 0px;
+  margin-right: 10px;
+	border-radius: 0 8px 8px 0;
+
+	transition: none;
+	color: #fff;
+}
+
+#memory {
+	margin-left: 8px;
+	transition: none;
+	color: #fff;
+	background: @color13;
+  border-bottom-style: hidden;
+}
+#cpu {
+	margin-left: 8px;
+	transition: none;
+	color: #fff;
+	background: @color14;
+  border-bottom-style: hidden;
+}
+
+#tray {
+	margin-left: 8px;
+	transition: none;
+	color: @color4;
+}
+
+#window {
+    margin-left: 60px;
+    margin-right: 60px;
+    color: #fff;
+}
+
+#custom-launcher {
+	font-size: 24px;
+	margin-left: 10px;
+  margin-right: 8px;
+	padding-right: 5px;
+  color: @color4;
+}
+
+
+#custom-power {
+	font-size: 15px;
+	margin-left: 8px;
+	margin-right: 8px;
+	padding-right: 5px;
+	transition: none;
+	color: @color8;
+	background: @color12;
+}
+
+#custom-updates {
+	margin-left: 8px;
+	transition: none;
+	color: #ddd;
+	background: @color3;
+}
+
+#custom-media {
+	margin-left: 8px;
+	transition: none;
+	color: @color8;
+	background: @color10;
+}

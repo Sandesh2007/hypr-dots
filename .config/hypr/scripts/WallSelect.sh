@@ -57,6 +57,13 @@ wall_selection=$(find "${wall_dir}" -type f \( -iname "*.jpg" -o -iname "*.jpeg"
 
 # Set wallpaper
 [[ -n "$wall_selection" ]] || exit 1
-swww img ${wall_dir}/${wall_selection} && wal -i ${wall_dir}/${wall_selection} && sh ~/.config/hypr/scripts/rofi-background.sh && sh ~/.config/waybar/launch.sh 
+swww img ${wall_dir}/${wall_selection} --transition-fps 60 --transition-duration 1.5 --transition-type=center
+#waypaper --wallpaper ${wall_dir}/${wall_selection} --backend swww
+#wpg -s ${wall_dir}/${wall_selection}
+sleep 1.2
+wal -i ${wall_dir}/${wall_selection}
+sh ~/.config/hypr/scripts/rofi_image.sh
+sh ~/.config/hypr/scripts/rofi-background.sh
+sh ~/.config/waybar/launch.sh
 
 exit 0

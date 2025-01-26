@@ -1,0 +1,43 @@
+/* Hyprshade Rofi Theme */
+* {
+    font: "JetBrains Mono Nerd Font 10";
+    background: #2f383e;
+    background-alt: #323d43;
+    foreground: #d3c6aa;
+    selected: #a7c080;
+    active: #d699b6;
+    urgent: #e67e80;
+}
+
+window {
+    background: @background;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+mainbox {
+    padding: 5px 10px;
+}
+
+listview {
+    spacing: 5px;
+    scrollbar: false;
+}
+
+element {
+    padding: 5px 10px;
+    background: @background-alt;
+    color: @foreground;
+}
+
+element selected {
+    background: @selected;
+    color: @background;
+}
+
+inputbar {
+    background: @background;
+    color: @foreground;
+    border-radius: 4px;
+    padding: 5px;
+}

@@ -7,6 +7,10 @@
 #        |___/|_|                        
 # 
 
+DIR="$HOME/.config/hypr/assets"
+onicon="$DIR/coffee.svg"
+officon="$DIR/off_coffee.svg"
+
 SERVICE="hypridle"
 if [[ "$1" == "status" ]]; then
     sleep 1
@@ -18,8 +22,10 @@ if [[ "$1" == "status" ]]; then
 fi
 if [[ "$1" == "toggle" ]]; then
     if pgrep -x "$SERVICE" >/dev/null ;then
-        killall hypridle
+        killall hypridle && dunstify -u low -i $onicon "Caffine Enabled" "Hypridle Off"
+
     else
-        hypridle
+        hypridle & dunstify -u low -i $officon  "Caffine Disabled" "Hypridle On"
+
     fi
 fi

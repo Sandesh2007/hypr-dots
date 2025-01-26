@@ -1,0 +1,94 @@
+@import url("colors.css");
+
+* {
+    font-family: 'SF Pro Text', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 50px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @fg;
+    transition-duration: .5s;
+}
+
+#workspaces {
+    background-color: @bg;
+    color: @foreground;
+    margin-left: 2px;
+    transition:0.5s;
+}
+
+#workspaces button.active {
+    color: #fff;
+    background-color: @light-yellow;
+    border-radius: 16px;
+    min-width: 15px;
+    transition: all 0.3s;
+}
+
+#workspaces button:hover {
+    color: #000;
+    background: @workspacesbackground2;
+    border-radius: 15px;
+    transition:0.3s;
+}
+
+
+.modules-left {
+    margin-left: 12px;    
+}
+
+.modules-right {
+    margin-right: 12px;    
+}
+
+#battery,
+#network,
+#pulseaudio,
+#window,
+#custom-windowsvm,
+#cpu,#temperature,
+#custom-spotify,
+#clock,
+#backlight {
+    color: @light-blue;
+    background-color: @bg;
+    margin: 0 6px 0 6px;
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
+}
+
+#clock {
+    color: @light-green;
+    background-color: @bg;
+    padding: 0 15px 0 15px;
+}
+
+#network {
+    color: @light-purple;
+}
+
+#pulseaudio {
+    color: @light-yellow;
+}
+
+#backlight {
+    color: @light-orange;
+}
+#window {
+    color: @light-yellow;
+}
+#custom-windowsvm {
+    color: @light-aqua;
+}
+#temperature.critical{
+    color: #FF0000;
+}
+
+tooltip {
+    background: @bg;
+    color: @fg;
+    border-radius: 7px;
+    border-width: 0px;
+}

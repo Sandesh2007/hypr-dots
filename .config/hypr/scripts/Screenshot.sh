@@ -3,7 +3,7 @@
 
 # Screenshot general options
 timestamp=$(date +%Y-%m-%d-%H%M%S)
-dir="$(xdg-user-dir PICTURES)/ScreenShots"
+dir="$(xdg-user-dir PICTURES)/Screenshots"
 filename="$dir/Shot-${timestamp}.png"
 
 # Create dir if not exists

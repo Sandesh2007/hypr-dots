@@ -1,0 +1,90 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 1,
+    "modules-left": ["hyprland/workspaces","group/req"],
+    "modules-center": ["custom/spotify"],
+    "modules-right": ["pulseaudio", "battery", "network", "backlight","clock"],
+
+    "include": [
+        "~/.config/waybar/modules.json"
+    ],
+    "hyprland/window": {
+      "format": "{}",
+      "max-length": 35,
+      "rewrite": {
+        "": "San Desh"
+      },
+      "separate-outputs": true
+    },
+
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "clock": {
+        "format": "󰥔   {:%I:%M %p}",
+        "format-alt": "󰥔   {:%a, %d. %b  %I:%M %p}"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "󰂱  {volume}%",
+        "format-muted": "󰖁",
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"],
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["󰖀", "󰕾"]
+        }
+    },
+    
+    "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "urgent": "",
+        "active": "",
+        "default": ""
+    },
+    "sort-by-number": true
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}   {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+
+    "group/req": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 300,
+            "children-class": "not-memory",
+            "transition-left-to-right": true
+    },
+    "modules": ["cpu","custom/windowsvm","temperature"]
+    },
+    "temperature": {
+        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon8/temp1_input",
+        "critical-threshold": 70,
+        "interval": 2,
+        "format-critical": " {temperatureC}°C  ",
+        "tooltip-format": "{temperatureC}°C Normal",
+        "tooltip-format-critical": "{temperatureC}°C Too hot!!",
+        "format": " {temperatureC}°C  "
+    }
+}

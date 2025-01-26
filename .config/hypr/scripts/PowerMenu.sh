@@ -19,10 +19,10 @@ chosen=$(printf "%s\n" "${options[@]}" | rofi_cmd)
 
 case $chosen in
     "")
-        systemctl poweroff
+        poweroff
         ;;
     "")
-        systemctl reboot
+        reboot
         ;;
     "")
         hyprlock

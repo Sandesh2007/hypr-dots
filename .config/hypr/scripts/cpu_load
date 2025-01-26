@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Launch the terminal running btop
+kitty -e btop &
+
+# Wait for the window to appear
+sleep 0.1
+
+# Set the window to floating mode
+hyprctl dispatch togglefloating
+
+# Resize the floating window to 100x100 pixels
+hyprctl dispatch resizeactive 100 100

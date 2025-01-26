@@ -4,7 +4,7 @@
 // | |  | | (_) | (_| | |_| | |  __/\__ \
 // |_|  |_|\___/ \__,_|\__,_|_|\___||___/
 //
-//
+
 {
   // Workspaces
   "hyprland/workspaces": {
@@ -40,11 +40,28 @@
       "Foot Server": "Terminal"
     }
   },
+  "wlr/workspaces": {
+  "format": "{icon}",
+  "on-click": "activate",
+  "format-icons": {
+    "1": "",
+    "2": "",
+    "3": "",
+    "4": "",
+    "5": "",
+    "urgent": "",
+    "active": "",
+    "default": ""
+  },
+  "sort-by-number": true
+},
+
 "custom/spotify": {
     "exec": "/usr/bin/python3 /home/sandesh/.config/waybar/scripts/mediaplayer.py --player spotify",
     "format": "{}  ",
     "return-type": "json",
     "on-click": "playerctl play-pause",
+    "on-click-right": "sh ~/.config/waybar/scripts/widget.sh",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
 },
@@ -80,6 +97,11 @@
     "format": "",
     "tooltip-format": "Tools"
   },
+  //Caffine
+  "custom/caffine":{
+   "format": "",
+   "on-click": "~/.config/hypr/scripts/hypridle.sh toggle"
+  },
    //cava
   "custom/cava-internal": {
     "exec": "~/.config/waybar/Cava.sh",
@@ -105,8 +127,6 @@
   },
 
 
-
-
   // Calculator
   "custom/calculator": {
     "format": "",
@@ -114,12 +134,12 @@
     "tooltip-format": "Open calculator"
   },
 
-  // // Windows VM
-  // "custom/windowsvm": {
-  //   "format": " ",
-  //   "on-click": "~/.config/ml4w/scripts/launchvm.sh",
-  //   "tooltip": false
-  // },
+  // Windows VM
+  "custom/windowsvm": {
+    "format": " ",
+    "on-click": "~/.config/waybar/scripts/confirmVm.sh",
+    "tooltip-format": "Launch windows 11 vm"
+  },
 
   // Rofi Application Launcher
   "custom/appmenu": {
@@ -142,7 +162,7 @@
   // Power Menu
   "custom/exit": {
     "format": " ",
-    "on-click": "wlogout",
+    "on-click": "~/.config/hypr/scripts/PowerMenu.sh",   //add wlogout if you want to use it.
     "tooltip-format": "Power Menu"
   },
 
@@ -150,8 +170,7 @@
   "custom/hyprshade": {
     "format": "",
     "tooltip-format": "Night light",
-    "on-click": "sleep 0.5; ~/.config/hypr/scripts/hyprshade.sh",
-    //"on-click-right": "sleep 0.5; ~/.config/hypr/scripts/hyprshade.sh rofi"
+    "on-click": "sleep 0.5; ~/.config/hypr/scripts/hyprshade.sh"
   },
 
   // Hypridle inhibitor
@@ -203,15 +222,17 @@
   "cpu": {
     "format": "  {usage}% ",
     "interval": 1,
-    "on-click": "kitty -e htop"
+    "on-click": "~/.config/hypr/scripts/cpu_load.sh"
   },
    "temperature": {
     // "thermal-zone": 2,
     "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon8/temp1_input",
     "critical-threshold": 70,
-    "interval": 2, 
-    "format-critical": "| {temperatureC}°C  |",
-    "tooltip-format": "",
+    "interval": 2,
+    "tooltip":true, 
+    "format-critical": " {temperatureC}°C  |",
+    "tooltip-format": "{temperatureC}°C",
+    "tooltip-format-critical": "{temperatureC}°C Too hot!!",
     "format": "| {temperatureC}°C  |"
   },
   "custom/amd_gpu": {
@@ -260,6 +281,7 @@
     "modules": [
       "custom/hyprshade",
       "custom/updates",
+      "custom/caffine",
       "power-profiles-daemon"
     ]
   },
@@ -359,7 +381,7 @@
       "tooltip": true,
       "format-icons": {
         "default": " ",
-        "performance": " ",
+        "performance": "",
         "balanced": " ",
         "power-saver": " "
      }   

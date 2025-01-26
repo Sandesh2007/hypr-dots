@@ -1,0 +1,129 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 0,
+
+    "include": [
+        "~/.config/waybar/modules.json"
+    ],
+      
+    "modules-left": [
+      "custom/launcher", 
+      "hyprland/workspaces",
+    //   "custom/power",
+      "tray"
+    ],
+      
+    "modules-center": ["hyprland/window","custom/spotify"],
+  
+      "modules-right": [
+      "battery",
+      "memory",
+      "cpu",
+      "network",
+      "pulseaudio",
+      "clock"
+    ],
+  
+      "pulseaudio": {
+          "tooltip": false,
+          "scroll-step": 5,
+          "format": "{icon} {volume}%",
+          "format-muted": "󰖁 {volume}%",
+          "on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+          "format-icons": {
+              "default": ["", "", ""]
+          }
+      },
+  
+    "hyprland/window": {
+      "format": "{}",
+      "max-length": 35,
+      "rewrite": {
+        "": "San Desh"
+      }
+    },
+    
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "disable-scroll": true,
+      "all-outputs": true,
+      "on-click": "activate",
+      "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": []
+          }
+    },
+  
+    "network": {
+          "tooltip": true,
+          "format-wifi": "  {signalStrength}",
+          "format-ethernet": "",
+      "format-disconnected": "󰖪 ",
+      "tooltip-format": "{essid}, 󰕒 {bandwidthUpBytes}, 󰇚 {bandwidthDownBytes}"
+      },
+      "backlight": {
+          "tooltip": false,
+          "format": " {}%",
+          "interval":1,
+          "on-scroll-up": "brightnessctl set 1%+",
+          "on-scroll-down": "brightnessctl set 1%-"
+      },
+      "battery": {
+          "states": {
+              "good": 95,
+              "warning": 30,
+              "critical": 20
+          },
+          "format": "{icon}  {capacity}%",
+          "format-charging": " {capacity}%",
+          "format-plugged": " {capacity}%",
+          "format-alt": "{time} {icon}",
+          "format-icons": ["", "", "", "", ""]
+      },
+      "tray":{
+          "icon-size":18,
+          "spacing": 10
+      },
+      "clock": {
+          "format": " {:%R}",
+          "tooltip-format": "{:%c}"
+      },
+      "cpu": {
+          "interval": 15,
+          "format": " {}%",
+          "max-length": 10
+      },
+      "memory": {
+          "interval": 30,
+          "format": " {}%",
+          "max-length": 10
+      },
+      "custom/musicard": {
+          "interval": 30,
+          "format": " ",
+          "return-type": "json",
+          "max-length": 20,
+          "format-icons": {
+              "spotify": " ",
+              "default": " "
+          },
+          "escape": true,
+          "on-click": "playerctl play-pause",
+          "on-click-right": "echo"
+      },
+      "custom/launcher":{
+          "tooltip": false,
+          "format": " ",
+          "on-click": "rofi -combi-modi drun,window,filebrowser,run -show combi"
+      },
+      "custom/power":{
+          "format": " ",
+          "on-click": "wlogout"
+      },
+  }
