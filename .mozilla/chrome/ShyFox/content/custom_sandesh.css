@@ -1,0 +1,94 @@
+/* to chage the logo and brower name in homepage */
+
+.logo{
+    background-image: url('./zoro_pfp.png') !important;
+    /* background-position: center !important; */
+    background-position: center bottom !important;
+    background-repeat: no-repeat !important;
+    border-radius: 50% !important;
+    }
+
+.wordmark {
+    background: url('./SANDESH.svg') no-repeat center center !important;
+    width: 295px !important;
+}
+
+/* .wordmark:hover {
+    cursor: pointer;
+} */
+
+/* search box in the home page */
+.fake-textbox {
+    color: transparent !important;
+    position: relative !important;
+}
+
+.fake-textbox::before {
+    content: "search me!";
+    color: white;
+}
+
+.top-site-outer {
+    width: 120px !important;
+    border-radius: 8px !important;
+    display: inline-block;
+    margin-block-end: 16px;
+}
+
+/* adds shimmer effect on hover on links */
+.top-site-outer:hover {
+    transition: all 700ms;
+
+    .top-site-inner {
+        background: linear-gradient(110deg, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 60%);
+        background-size: 200% 100%;
+        animation: shimmer 2.2s infinite linear;
+    }
+
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* customize new tab btn at top right */
+.icon.icon-settings {
+    transition: all 500ms;
+    transform: rotate(0deg);
+}
+
+.icon.icon-settings:hover {
+    transform: rotate(90deg) scale(1.12);
+}
+
+.non-collapsible-section{
+    border-radius: 29px 29px 0 0 !important;
+}
+
+.body-wrapper{
+    height: 260px !important;
+    border-radius: 0 0 29px 29px !important;
+}
+
+.logo-and-wordmark{
+    height: 120px !important;
+    min-width: 90% !important;
+}
+
+.newtab-main{
+    width: fit-content !important;
+    height: fit-content !important;
+    backdrop-filter: blur(4px) !important;
+}
+
+.search-inner-wrapper{
+    background: transparent !important;
+    border-radius: 23px !important;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2) !important;
+}
