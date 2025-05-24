@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# check if internet is connected or connected with no internet
+connected_icon="$HOME/.config/hypr/assets/connected_wifi.svg"
+no_internet_icon="$HOME/.config/hypr/assets/no_internet.svg"
+current_wifi=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d: -f2)
+
+ping -q -c 1 -W 1 8.8.8.8 >/dev/null &&
+  notify-send -i $connected_icon "$current_wifi is up." "" ||
+  notify-send -i $no_internet_icon "$current_wifi is Connected, but no internet."

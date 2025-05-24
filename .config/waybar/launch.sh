@@ -24,4 +24,9 @@ sleep 0.5
 
 current_waybar=$(cat ~/.cache/waybar/current-theme)
 
+# if [ "$current_waybar" = "Claude" ]; then
+#     echo "poo"
+#     sh ~/.config/waybar/scripts/matugen.sh
+#     fi
+
 waybar -c ~/.config/waybar/themes/$current_waybar/config -s ~/.config/waybar/themes/$current_waybar/style.css &

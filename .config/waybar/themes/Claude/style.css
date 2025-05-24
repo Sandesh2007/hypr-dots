@@ -1,0 +1,303 @@
+@import "../../colors.css";
+
+* {
+  /* General styling */
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font Propo", "Font Awesome 6 Free",
+    FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  /* Using matugen variables for transparency */
+  background: rgba(0, 0, 0, 0);
+  color: @on_surface;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  border-radius: 10px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* Material Design uses rounded corners */
+tooltip {
+  background-color: @surface_container;
+  border-radius: 12px;
+  border: 2px;
+}
+
+tooltip label {
+  color: @on_surface;
+}
+
+#workspaces {
+  background-color: @surface_container_high;
+  color: @on_surface;
+  border-radius: 8px 0px 8px 0px;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  background-color: transparent;
+  color: @on_surface_variant;
+  border-radius: 8px 0px 8px 0px;
+  transition: all 200ms ease;
+  margin: 1px 1px;
+}
+
+#workspaces button:hover {
+  background: @surface_container_high;
+  color: @on_surface;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.active {
+  background-color: @primary;
+  color: @surface_container;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.urgent {
+  background-color: @error;
+  color: @on_error;
+}
+
+#mode {
+  background-color: @secondary;
+  color: @on_secondary;
+  border-radius: 20px;
+  margin: 4px 0;
+  padding: 0 10px;
+}
+
+#window {
+  margin: 0 4px;
+  border-radius: 10px;
+  background-color: @surface_container_low;
+  color: @on_surface;
+  padding: 0 6px;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#custom-notification,
+#power-profiles-daemon,
+#custom-exit,
+#mode {
+  background-color: @surface_container;
+  color: @primary;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  padding: 0 12px 0 12px;
+  margin: 0 0 0 12px;
+}
+
+/* Module-specific styling with Material You design elements */
+#clock {
+  background-color: @primary;
+  color: @on_primary;
+  font-weight: bold;
+}
+
+#battery {
+  background-color: @secondary;
+  color: @on_secondary;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @on_tertiary;
+  background-color: @tertiary;
+}
+
+@keyframes blink {
+  to {
+    background-color: @error;
+    color: @on_error;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: @error_container;
+  color: @on_error_container;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#cpu {
+  background-color: @secondary;
+  color: @on_secondary;
+}
+
+#memory {
+  background-color: @surface_container_high;
+  color: @on_surface;
+}
+
+#backlight {
+  background-color: @surface_container_high;
+  color: @on_surface;
+}
+
+#network {
+  background-color: @surface_container_high;
+  color: @on_surface;
+}
+
+#network.disconnected {
+  background-color: @error_container;
+  color: @on_error_container;
+}
+
+#pulseaudio {
+  background-color: @surface_container_high;
+  color: @on_surface;
+}
+
+#pulseaudio.muted {
+  background-color: @surface_variant;
+  color: @on_surface_variant;
+}
+
+#custom-media {
+  background-color: @tertiary;
+  color: @on_tertiary;
+  min-width: 100px;
+}
+
+#temperature {
+  background-color: @surface_container_high;
+  color: @on_surface;
+}
+
+#temperature.critical {
+  background-color: @error_container;
+  color: @on_error_container;
+}
+
+#tray {
+  background-color: @surface_container;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: @error_container;
+}
+
+/* Hover effects for all modules following Material Design */
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-media:hover,
+#power-profiles-daemon:hover,
+#tray:hover {
+  background-color: @surface_container_highest;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+#custom-exit {
+  color: inherit;
+  background-color: @on_error;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+#custom-exit:hover {
+  color: inherit;
+  border-radius: 8px;
+}
+/* launcher rofi */
+#custom-appmenu {
+  color: @primary;
+  background-color: @surface_container_highest;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 0 12px 0 12px;
+}
+#custom-appmenu:hover {
+  color: inherit;
+  border-radius: 8px;
+}
+
+/* Animations for transitions - Material You uses smooth animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#power-profiles-daemon,
+#tray,
+#custom-windowsvm,
+#custom-workspace,
+#window {
+  animation: fadeIn 300ms ease-in-out;
+}
+
+#clock:hover,
+#battery:hover {
+  color: white;
+}
+
+#custom-notification {
+  background-color: @surface_container_high;
+}
+#custom-windowsvm {
+  background-image: url("/home/sandesh/.config/waybar/assets/win11.png");
+  background-position: center;
+  background-size: cover;
+  background-color: @surface_container;
+  color: @primary;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  padding: 12 12px 2px 12px;
+  margin: 0 0 0 12px;
+}
+
+#custom-workspace {
+  background-image: url("/home/sandesh/.config/waybar/assets/workspace.svg");
+  background-position: center;
+  background-size: cover;
+  background-color: @surface_container;
+  color: @primary;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  padding: 12 12px 2px 12px;
+  margin: 0 0 0 12px;
+}

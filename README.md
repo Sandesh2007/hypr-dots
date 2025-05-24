@@ -1,5 +1,5 @@
 # hypr-dots
- My minimal hyprland with Everforest gtk theme, Gruvbox plus icons and pywal. nothing fancy! 
+ My minimal hyprland with Everforest gtk theme, Gruvbox plus icons and pywal. nothing fancy!
 
 # Configurations:
 
@@ -9,12 +9,11 @@
 
 - **OS**: [Arch Linux](https://archlinux.org/) :boom:
 - **WM**: [hyprland](https://hyprland.org/) :window:
-- **Shell**: [zsh](https://fishshell.com/) :shell:
+- **Shell**: [zsh](https://github.com/ohmyzsh/ohmyzsh) :shell:
 - **Terminal Emulator**: [kitty](https://sw.kovidgoyal.net/kitty/) :cat:
 - **Panel**: [waybar](https://github.com/Alexays/Waybar) :shaved_ice:
 - **Text Editor**: [neovim](https://neovim.io/) :keyboard:
 - **App Launcher**: [rofi](https://davatorium.github.io/rofi/) :rocket:
-- **File Manager**: [thunar](https://yazi-rs.github.io/) :open_file_folder:
 - **Browser**: [Firefox](https://floorp.app/en) :globe_with_meridians:
 - **Notification Manager**: [dunst](https://github.com/ErikReider/SwayNotificationCenter) :bell:
 - **Colorscheme**: [Everforest](https://github.com/catppuccin/catppuccin) :art:
@@ -53,10 +52,10 @@ Here is all the information about my Laptop:
 
 | 📚 Entry                 | ✨ App                                                                                                                  |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| **Music Player**         | [Spotify](https://open.spotify.com/) (patched with [Spicetify](https://spicetify.app/)) [:gear:]|
-| **Fallback Text Editor** | [Vscode](https://vscodium.com/) [:gear:]                                                 |
-| **Web Browser**          | [Firefox](https://floorp.app/en/) [:gear:]                                                       |
-| **PDF Viewer**           | [Zathura](https://pwmt.org/projects/zathura/) [:gear:]                                             |
+| **Music Player**         | [Spotify](https://open.spotify.com/) (patched with [Spicetify](https://spicetify.app/))
+| **Fallback Text Editor** | [Vscode](https://vscodium.com/)                                                  |
+| **Web Browser**          | [Firefox](https://floorp.app/en/)                                                        |
+| **PDF Viewer**           | [Zathura](https://pwmt.org/projects/zathura/)                                             |
 | **File Manager**         | [Thunar](https://community.linuxmint.com/software/view/nemo)                                                              |
 
 </details>

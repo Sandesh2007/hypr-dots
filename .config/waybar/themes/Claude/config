@@ -1,0 +1,216 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "spacing": 8,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "include": [
+        "~/.config/waybar/modules.json"
+    ],
+
+    "modules-left": [
+        "custom/appmenu",
+        // "group/extras",
+        "hyprland/workspaces",
+        "hyprland/window",
+        "custom/media"
+    ],
+    "modules-center": [
+        "power-profiles-daemon",
+        "clock",
+        "custom/notification"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "group/hardware",
+        "backlight",
+        "battery",
+        "tray",
+        "custom/exit"
+    ],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "urgent": "󰗖",
+            "active": "󱓻",
+            "default": ""
+        },
+        "on-click": "activate",
+        "on-click-right": "sh ~/.config/waybar/scripts/overview.sh"
+    },
+    "hyprland/window": {
+        "max-length": 30,
+        "separate-outputs": true,
+        "rewrite": {
+            "": "San Desh"
+        }
+    },
+    "custom/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "clock": {
+        "format": "{:%I:%M} 󰃰",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% 󰍛",
+        "tooltip": true,
+        "interval": 1
+    },
+    "memory": {
+        "format": "{}% 󰘚",
+        "interval": 1
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [
+            "󱃃",
+            "󰔏",
+            "󱃂"
+        ],
+        "interval": 2
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "󰃚",
+            "󰃛",
+            "󰃜",
+            "󰃝",
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
+        "on-click": "~/.config/hypr/scripts/hyprshade.sh",
+        "on-scroll-up": "~/.config/hypr/scripts/brightness_control.sh increase",
+        "on-scroll-down": "~/.config/hypr/scripts/brightness_control.sh decrease"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}% 󰚥",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+    "network": {
+        "format-wifi": "({signalStrength}%) 󰖩",
+        "format-ethernet": "{ipaddr}/{cidr} 󰈀",
+        "tooltip-format": "{ifname} via {gwaddr} 󰱟",
+        "format-linked": "{ifname} (No IP) 󰲛",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}󰂯 {format_source}",
+        "format-bluetooth-muted": "󰝟 {icon}󰂯 {format_source}",
+        "format-muted": "󰝟 {format_source}",
+        "format-source": "{volume}% 󰍬",
+        "format-source-muted": "󰍭",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󰥰",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰄝",
+            "car": "󰄋",
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "󰓇",
+            "default": "󰝚"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "custom/exit": {
+        "format": "{}",
+        "on-click": "~/.config/hypr/scripts/PowerMenu.sh",
+        "tooltip-format": "Power Menu"
+    },
+
+    "group/hardware": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": true
+    },
+    "modules": ["cpu", "memory","temperature"]
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power mode: {profile}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "󰠠",
+      "balanced": "󰚀",
+      "power-saver": "󰌪"
+    }
+  },
+  "custom/appmenu": {
+    "format": "",
+    "on-click": "~/.config/rofi/launcher.sh",
+    "tooltip-format": "Application launcher"
+  },
+  "custom/windowsvm": {
+    "format": " ",
+    "on-click": "~/.config/waybar/scripts/confirmVm.sh",
+    "tooltip-format": "Launch windows 11 vm"
+  },
+  
+  "custom/workspace": {
+    "format": " ",
+    "on-click": "~/.config/waybar/scripts/overview.sh",
+    "tooltip-format": "Workspaces overview"
+  }
+}

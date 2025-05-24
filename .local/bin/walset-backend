@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Check if the user provided an argument
+if [ "$#" -ne 1 ]; then
+  echo "Usage: $0 <path_to_image>"
+  exit 1
+fi
+
+IMAGE="$1"
+
+# Send notification to the user
+notify-send "Changing Theme" "Applying new wallpaper and updating colors, please wait until confirmation..."
+
+# Set wallpaper
+swww img "$IMAGE" --transition-type="center" --transition-step=1 --transition-fps="60"
+
+# Generate pywal colors
+wal -i "$IMAGE" -n -s -t -e
+
+# Refresh Spotify
+# pywal-spicetify Matugen
+
+# Use Matugen to generate Material You colors
+matugen image "$IMAGE"
+
+# Refresh swaync
+pkill swaync
+swaync >/dev/null 2>&1 &
+
+# Refresh rofi image
+sh ~/.config/hypr/scripts/rofi_image.sh &
+sh ~/.config/hypr/scripts/rofi-background.sh
+
+# Refresh waybar
+pkill waybar
+sh ~/.config/waybar/launch.sh >/dev/null 2>&1 &
+
+# Re-enable hyprshade
+sh ~/.config/hypr/scripts/hyprshade.sh
+
+notify-send "Theme Applied" "Wallpaper and theme updated successfully!"

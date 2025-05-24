@@ -86,9 +86,12 @@ class PlayerManager:
         players = self.get_players()
         logger.debug(f"Getting first playing player from {len(players)} players")
         if len(players) > 0:
+            # if any are playing, show the first one that is playing
+            # reverse order, so that the most recently added ones are preferred
             for player in players[::-1]:
                 if player.props.status == "Playing":
                     return player
+            # if none are playing, show the first one
             return players[0]
         else:
             logger.debug("No players found")
@@ -96,6 +99,9 @@ class PlayerManager:
 
     def show_most_important_player(self):
         logger.debug("Showing most important player")
+        # show the currently playing player
+        # or else show the first paused player
+        # or else show nothing
         current_player = self.get_first_playing_player()
         if current_player is not None:
             self.on_metadata_changed(current_player, current_player.props.metadata)
@@ -107,7 +113,6 @@ class PlayerManager:
         player_name = player.props.player_name
         artist = player.get_artist()
         title = player.get_title()
-        title = title.replace("&", "&amp;")
 
         track_info = ""
         if player_name == "spotify" and "mpris:trackid" in metadata.keys() and ":ad:" in player.props.metadata["mpris:trackid"]:
@@ -117,16 +122,12 @@ class PlayerManager:
         else:
             track_info = title
 
-        max_length = 30
-        if len(track_info) > max_length:
-            track_info = track_info[:max_length] + "..."
-
         if track_info:
             if player.props.status == "Playing":
-                track_info = " " + track_info
+                track_info = "   " + track_info
             else:
-                track_info = " " + track_info
-
+                track_info = "   " + track_info
+        # only print output if no other player is playing
         current_playing = self.get_first_playing_player()
         if current_playing is None or current_playing.props.player_name == player.props.player_name:
             self.write_output(track_info, player)
@@ -136,12 +137,14 @@ class PlayerManager:
     def on_player_appeared(self, _, player):
         logger.info(f"Player has appeared: {player.name}")
         if player.name in self.excluded_player:
-            logger.debug("New player appeared, but it's in exclude player list, skipping")
+            logger.debug(
+                "New player appeared, but it's in exclude player list, skipping")
             return
         if player is not None and (self.selected_player is None or player.name == self.selected_player):
             self.init_player(player)
         else:
-            logger.debug("New player appeared, but it's not the selected player, skipping")
+            logger.debug(
+                "New player appeared, but it's not the selected player, skipping")
 
     def on_player_vanished(self, _, player):
         logger.info(f"Player {player.props.player_name} has vanished")

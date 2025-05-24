@@ -5,7 +5,7 @@
  * 
  * Rofi Theme File
  **/
-
+@theme "/home/sandesh/.local/share/rofi/themes/material-you/material-colors.rasi"
 
 /*****----- Configuration -----*****/
 configuration {
@@ -24,13 +24,14 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "JetBrains Mono Nerd Font 10";
-    background:                  #2f383e;   /* Background */
-    background-alt:              #323d43;   /* Darker Background */
-    foreground:                  #d3c6aa;   /* Foreground */
-    selected:                    #a7c080;   /* Selection */
-    active:                      #d699b6;   /* Active Item */
-    urgent:                      #e67e80;   /* Urgent Item */
+      font:"JetBrains Mono Nerd Font 10";
+      bg: @surface;
+      fg: @on-surface;
+      accent: @primary;
+      button: @surface-container;
+
+      background-color: @bg;
+      text-color: @fg;
 }
 
 /*****----- Main Window -----*****/

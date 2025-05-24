@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# define variable
+runCs=mcs
+runExe=mono
+
+FILE="$1"
+OPTION="$2"
+
+if [[ "$FILE" != *.cs ]]; then
+    echo "only .cs files are accepted"
+    exit 1
+fi
+
+BASENAME="${FILE%.cs}"
+EXEFILE="${BASENAME}.exe"
+
+if [ "$OPTION" == "unsafe" ]; then
+    mcs -unsafe "$FILE"
+    mono "$EXEFILE"
+else
+    mcs "$FILE"
+    mono "$EXEFILE"
+fi

@@ -1,0 +1,59 @@
+* {
+  background: #1e1e2e;
+  background-alt: #313244;
+  foreground: #cdd6f4;
+  selected: #89b4fa;
+  accent: #f38ba8;
+  border-color: #89b4fa;
+  font: "JetBrainsMono Nerd Font 12";
+}
+
+window {
+  width: 60%;
+  padding: 20px;
+  border: 2px;
+  border-color: @border-color;
+  background-color: @background;
+}
+
+mainbox {
+  orientation: vertical;
+  spacing: 10px;
+}
+
+message {
+  padding: 10px;
+  background-color: @background-alt;
+  border-radius: 5px;
+}
+
+listview {
+  layout: vertical;
+  spacing: 8px;
+  scrollbar: true;
+  fixed-height: false;
+}
+
+element {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: transparent;
+  text-color: @foreground;
+}
+
+element selected {
+  background-color: @selected;
+  text-color: @background;
+}
+
+element alternate {
+  background-color: @background-alt;
+}
+
+entry {
+  padding: 10px;
+  background-color: @background-alt;
+  text-color: @foreground;
+  border-radius: 5px;
+  placeholder: "Search wallpapers...";
+}

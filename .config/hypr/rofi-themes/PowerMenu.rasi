@@ -6,7 +6,16 @@ configuration {
 	me-accept-entry:			"MousePrimary";
 }
 
-@import "shared.rasi"
+@theme "/home/sandesh/.local/share/rofi/themes/material-you/material-colors.rasi"
+
+* {
+    font:                        "JetBrains Mono Nerd Font Propo 10";
+    background:                  @surface;   /* Background */
+    button:                      @surface-container;   /* Darker Background */
+    foreground:                  @on-surface;   /* Foreground */
+    selected:                    @primary;   /* Selection */
+    urgent:                      @on-error;   /* Urgent Item */
+}
 
 window {
     transparency:                "real";
@@ -16,7 +25,7 @@ window {
     width:                       1000px;
     border-radius:               50px;
     cursor:                      "default";
-    background-color:            @background-alt;
+    background-color:            @background;
 }
 
 mainbox {

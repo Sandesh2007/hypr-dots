@@ -72,16 +72,16 @@ case $1 in
 esac
 }
 
-select_option="$(run_rofi)"
-case ${select_option} in
-	"$s_full")
-		run_cmd --now ;;
-	"$s_select")
-		run_cmd --sel ;;
-	"$s_active")
-		run_cmd --active ;;
-	"$s_in3")
-		run_cmd --in3 ;;
-	"$s_in10")
-		run_cmd --in10 ;;
-esac
+# use command directly without rofi
+if [[ -n "$1" ]]; then
+    run_cmd "$1"
+else
+    select_option="$(run_rofi)"
+    case ${select_option} in
+        "$s_full") run_cmd --now ;;
+        "$s_select") run_cmd --sel ;;
+        "$s_active") run_cmd --active ;;
+        "$s_in3") run_cmd --in3 ;;
+        "$s_in10") run_cmd --in10 ;;
+    esac
+fi

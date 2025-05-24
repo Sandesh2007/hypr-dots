@@ -11,7 +11,7 @@
 # Icons
 vol_dir="$HOME/.config/hypr/assets/dunst/"
 notify_cmd='dunstify -u low -h string:x-dunst-stack-tag:cvolum'
-sound_file="$HOME/.config/hypr/assets/sounds/volume.wav"
+# sound_file="$HOME/.config/hypr/assets/sounds/volume.wav"
 
 # Get Volume
 get_volume() {
@@ -19,16 +19,16 @@ get_volume() {
 }
 
 # Play sound function
-play_sound() {
-    if command -v paplay > /dev/null; then
-        paplay "$sound_file" &
-    elif command -v aplay > /dev/null; then
-        aplay "$sound_file" &
-    else
-        dunstify "No supported audio player found." "Install 'paplay' or 'aplay'." -i $icon -u normal
+# play_sound() {
+#     if command -v paplay > /dev/null; then
+#         paplay "$sound_file" &
+#     elif command -v aplay > /dev/null; then
+#         aplay "$sound_file" &
+#     else
+#         dunstify "No supported audio player found." "Install 'paplay' or 'aplay'." -i $icon -u normal
 
-    fi
-}
+#     fi
+# }
 
 # Get icons
 get_icon() {
@@ -70,7 +70,7 @@ toggle_mute() {
         message="Unmute"
     fi
     ${notify_cmd} -i "$icon" "$message"
-    play_sound
+    # play_sound
 }
 
 # Execute accordingly
