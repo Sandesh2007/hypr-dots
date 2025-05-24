@@ -15,7 +15,7 @@
 - **Text Editor**: [neovim](https://neovim.io/) :keyboard:
 - **App Launcher**: [rofi](https://davatorium.github.io/rofi/) :rocket:
 - **Browser**: [Firefox](https://floorp.app/en) :globe_with_meridians:
-- **Notification Manager**: [dunst](https://github.com/ErikReider/SwayNotificationCenter) :bell:
+- **Notification Manager**: [swaync](https://github.com/ErikReider/SwayNotificationCenter) :bell:
 - **Colorscheme**: [Everforest](https://github.com/catppuccin/catppuccin) :art:
 
 ---
@@ -27,12 +27,12 @@ Here is all the information about my Laptop:
 <details>
   <summary><b>🐧 System</b></summary>
 
-| 📚 Entry                       | ✨ App                                                                                                                                       |
+| 📚 Entry                       |  App                                                                                                                                       |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | **OS**                         |  [Arch Linux](https://archlinux.org/)                                                                                                      |
 | **Package Manager**            | [pacman](https://wiki.archlinux.org/title/Pacman)                                                              |
 | **AUR Helper**                 |  [yay](https://github.com/Jguer/yay)                                                                          |
-| **Display Manager**            | [sddm](https://sr.ht/~kennylevinsen/greetd/) (with [corner](https://github.com/apognu/tuigreet))                                         |
+| **Display Manager**            | [sddm](https://sr.ht/~kennylevinsen/greetd/) (with [corner](https://github.com/aczw/sddm-theme-corners))                                         |
 | **Window Manager**             |  [hyprland](https://hyprland.org/) [:gear:](../.config/hypr/)                                                                              |
 | **Notification Daemon/Center** | [dunst](https://github.com/ErikReider/SwayNotificationCenter)                                               |
 | **Bar**                        |  [waybar](https://github.com/Alexays/Waybar) [:gear:](../.config/waybar/)                                                                  |
@@ -50,13 +50,13 @@ Here is all the information about my Laptop:
 <details>
   <summary><b>🖱️ GUI Apps</b></summary>
 
-| 📚 Entry                 | ✨ App                                                                                                                  |
+| 📚 Entry                 |  App                                                                                                                  |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | **Music Player**         | [Spotify](https://open.spotify.com/) (patched with [Spicetify](https://spicetify.app/))
 | **Fallback Text Editor** | [Vscode](https://vscodium.com/)                                                  |
-| **Web Browser**          | [Firefox](https://floorp.app/en/)                                                        |
+| **Web Browser**          | [Firefox](https://www.mozilla.org/en-US/firefox/new/)                                                        |
 | **PDF Viewer**           | [Zathura](https://pwmt.org/projects/zathura/)                                             |
-| **File Manager**         | [Thunar](https://community.linuxmint.com/software/view/nemo)                                                              |
+| **File Manager**         | [Nautilus](https://apps.gnome.org/Nautilus/)                                                              |
 
 </details>
 

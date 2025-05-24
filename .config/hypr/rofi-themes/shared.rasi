@@ -1,14 +1,14 @@
-// Rofi colors from pywal
-@import "~/.cache/wal/colors-rofi-dark.rasi"
+// Rofi colors from matugen
+@theme "/home/sandesh/.local/share/rofi/themes/material-you/material-colors.rasi"
 
 * {
     font: "JetBrainsMono NF Bold 9";
-    background: #2d353b;
-    background-alt: #2d353bE0;
-    foreground: #fff;
-    selected: @selected-normal-background;    //selected: #7fbbb3;
-    active: @selected-urgent-background;
-    urgent: #e67e80;
+    background: @surface;
+    background-alt: @surface-container;
+    foreground: @on-surface;
+    selected: @primary;
+    active: @tertiary;
+    urgent: @on-error;
     
 }
 

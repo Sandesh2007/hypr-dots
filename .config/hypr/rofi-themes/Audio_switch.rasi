@@ -6,14 +6,16 @@ configuration {
     hover-select:				true;
 }
 
+@theme "/home/sandesh/.local/share/rofi/themes/material-you/material-colors.rasi"
+
+
 * {
     font: "JetBrains Mono Nerd Font 10";
-    background: #2f383e;       
-    background-alt: #323d43;   
-    foreground: #d3c6aa; 
-    selected: #a7c080;
-    active: #d699b6;
-    urgent: #e67e80;                   
+    background: @surface;       
+    background-alt: @surface-container;   
+    foreground: @on-surface; 
+    selected: @primary;
+    urgent: @on-error;                   
     border-color: @background;             
     border: 2px;
     padding: 0px;
@@ -65,10 +67,7 @@ element normal.urgent {
     background-color:            @urgent;
     text-color:                  @foreground;
 }
-element normal.active {
-    background-color:            @active;
-    text-color:                  @foreground;
-}
+
 element selected.normal {
     background-color:            @selected;
     text-color:                  #000;  /* Black text when selected */

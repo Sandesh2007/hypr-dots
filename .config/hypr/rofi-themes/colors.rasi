@@ -1,13 +1,15 @@
+@theme "/home/sandesh/.local/share/rofi/themes/material-you/material-colors.rasi"
+
+
 * {
-background:			#0a0a09B3;
-backgroundSolid:			#0a0a09;
-backgroundAdditional:			#0a0a0966;
-    background-alt: #00000000;
-foreground:			#fdfffd;
-foreground-alt:			#fdfffd;
-selected:			#995C38;
-highlight:			#CB9D6D;
-urgent:				#8F7359;
-on:					#6C6559;
-off:				#995C38;
+background:			                      @surface;
+backgroundAdditional:                   #0a0a0966;
+background-alt:                           @surface-container;
+foreground:			                      @on-surface;
+foreground-alt:			             #fdfffd;
+selected:			                      @primary;
+highlight:			                     #CB9D6D;
+urgent:				                      @on-error;
+on:					                 #6C6559;
+off:				                     #995C38;
 }
