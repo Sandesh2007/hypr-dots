@@ -21,7 +21,7 @@ configuration {
 }
 
 window {
-      border-radius: 7px;
+      border-radius: 12px;
       width: 40%;
       background-color: @bg;
       text-color: @fg;

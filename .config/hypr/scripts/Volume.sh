@@ -10,7 +10,7 @@
 
 # Icons
 vol_dir="$HOME/.config/hypr/assets/dunst/"
-notify_cmd='dunstify -u low -h string:x-dunst-stack-tag:cvolum'
+notify_cmd='notify-send -u low -h string:x-dunst-stack-tag:cvolum'
 # sound_file="$HOME/.config/hypr/assets/sounds/volume.wav"
 
 # Get Volume
@@ -25,7 +25,7 @@ get_volume() {
 #     elif command -v aplay > /dev/null; then
 #         aplay "$sound_file" &
 #     else
-#         dunstify "No supported audio player found." "Install 'paplay' or 'aplay'." -i $icon -u normal
+#         notify-send "No supported audio player found." "Install 'paplay' or 'aplay'." -i $icon -u normal
 
 #     fi
 # }

@@ -22,10 +22,10 @@ if [[ "$1" == "status" ]]; then
 fi
 if [[ "$1" == "toggle" ]]; then
     if pgrep -x "$SERVICE" >/dev/null ;then
-        killall hypridle && dunstify -u low -i $onicon "Caffine Enabled" "Hypridle Off"
+        killall hypridle && notify-send -u low -i $onicon "Caffine Enabled" "Hypridle Off"
 
     else
-        hypridle & dunstify -u low -i $officon  "Caffine Disabled" "Hypridle On"
+        hypridle & notify-send -u low -i $officon  "Caffine Disabled" "Hypridle On"
 
     fi
 fi

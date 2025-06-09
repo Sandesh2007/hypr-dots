@@ -1,4 +1,4 @@
-@import "../../colors.css";
+  @import "../../colors.css";
 
 * {
   /* General styling */
@@ -41,6 +41,7 @@ tooltip label {
 }
 
 #workspaces button {
+  all: unset;
   padding: 0 6px;
   background-color: transparent;
   color: @on_surface_variant;
@@ -96,6 +97,7 @@ tooltip label {
 #custom-notification,
 #power-profiles-daemon,
 #custom-exit,
+#custom-caffine,
 #mode {
   background-color: @surface_container;
   color: @primary;
@@ -143,6 +145,13 @@ tooltip label {
 #cpu {
   background-color: @secondary;
   color: @on_secondary;
+}
+#cpu.warning {
+  background-color: @tertiary;
+}
+#cpu.critical {
+  background-color: @error_container;
+  color: @on_error_container;
 }
 
 #memory {
@@ -205,7 +214,6 @@ tooltip label {
 }
 
 /* Hover effects for all modules following Material Design */
-#cpu:hover,
 #memory:hover,
 #temperature:hover,
 #backlight:hover,
@@ -271,6 +279,7 @@ tooltip label {
 }
 
 #clock:hover,
+#cpu:hover,
 #battery:hover {
   color: white;
 }

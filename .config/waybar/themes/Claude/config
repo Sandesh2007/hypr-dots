@@ -30,6 +30,7 @@
         "backlight",
         "battery",
         "tray",
+        "custom/caffine",
         "custom/exit"
     ],
     "hyprland/workspaces": {
@@ -70,6 +71,10 @@
     },
     "cpu": {
         "format": "{usage}% 󰍛",
+        "states":{
+            "warning": 70,
+            "critical": 90
+        },
         "tooltip": true,
         "interval": 1
     },

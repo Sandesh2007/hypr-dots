@@ -30,4 +30,4 @@ fi
 # Set the new brightness level
 brightnessctl set "${new_brightness}%"
 
-dunstify "Brightness ${new_brightness}%" -i $icon -r 5555 -u low -h int:value:$(($new_brightness))
+notify-send "Brightness ${new_brightness}%" -i $icon -r 5555 -u low -h int:value:$(($new_brightness))

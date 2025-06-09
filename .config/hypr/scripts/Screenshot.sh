@@ -21,7 +21,7 @@ rofi_cmd() {
 		-p Screenshot \
 		-mesg "Directory :: $dir" \
 		-markup-rows \
-		-theme "$HOME"/.config/bspwm/src/rofi-themes/Screenshot.rasi
+		-theme "$HOME"/.config/hypr/rofi-themes/Screenshot.rasi
 }
 
 run_rofi() {
@@ -30,9 +30,9 @@ run_rofi() {
 
 show_notification() {
     if [[ -e "$filename" ]]; then
-        dunstify --replace=699 -i "$filename" "Screenshot" "Screenshot saved and copied to clipboard"
+        notify-send --replace=699 -i "$filename" "Screenshot" "Screenshot saved and copied to clipboard"
     else
-        dunstify --replace=699 -i custom-trash-bin "Screenshot" "Screenshot Canceled"
+        notify-send --replace=699 -i custom-trash-bin "Screenshot" "Screenshot Canceled"
     fi
 }
 
@@ -41,18 +41,18 @@ copy_screenshot() {
 }
 
 take_screenshot() {
-    grim "$@" "$filename" && paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &>/dev/null | copy_screenshot
+    grim "$@" "$filename" && paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &>/dev/null | swappy -f "$filename"
     show_notification
 }
 
 take_screenshot_select() {
-    grim -g "$(slurp)" "$filename" && paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &>/dev/null | copy_screenshot
+    grim -g "$(slurp)" "$filename" && paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &>/dev/null | swappy -f "$filename" 
     show_notification
 }
 
 countdown() {
     for sec in $(seq "$1" -1 1); do
-        dunstify -t 300 -i  ~/.config/bspwm/assets/screenshot.png "Taking shot in : $sec"
+        notify-send -t 300 -i  ~/.config/bspwm/assets/screenshot.png "Taking shot in : $sec"
         sleep 1
     done
 }

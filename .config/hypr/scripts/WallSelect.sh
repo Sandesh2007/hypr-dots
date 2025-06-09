@@ -19,10 +19,10 @@
 
 # Verifies if xdpyinfo and imagemagick are installed
 if ! command -v xdpyinfo >/dev/null 2>&1; then
-  dunstify "Missing package" "Please install the xorg-xdpyinfo package to continue" -u critical
+  notify-send "Missing package" "Please install the xorg-xdpyinfo package to continue" -u critical
   exit 1
 elif ! command -v magick >/dev/null 2>&1; then
-  dunstify "Missing package" "Please install the imagemagick package to continue" -u critical
+  notify-send "Missing package" "Please install the imagemagick package to continue" -u critical
   exit 1
 fi
 

@@ -22,7 +22,7 @@ play_sound() {
     elif command -v aplay > /dev/null; then
         aplay "$sound_file" &
     else
-        dunstify "No supported audio player found." "Install 'paplay' or 'aplay'." -i $icon -u normal
+        notify-send "No supported audio player found." "Install 'paplay' or 'aplay'." -i $icon -u normal
 
     fi
 }
@@ -42,18 +42,18 @@ if check_network; then
     updates=$(("$updates_arch" + "$updates_aur"))
 
     if (( updates > 0 && updates < 100 )); then
-        dunstify "Update available" "Updates : $updates" -i $icon -u normal
+        notify-send "Update available" "Updates : $updates" -i $icon -u normal
         play_sound
 
     elif (( updates >= 100 )); then
-        dunstify "System update warning" "<span color='red'>\n Updates: $updates</span>" -i $icon -u critical
+        notify-send "System update warning" "<span color='red'>\n Updates: $updates</span>" -i $icon -u critical
         play_sound
 
     else 
-        dunstify "No updates available" "Your system is up to date" -i $updated_icon -u low
+        notify-send "No updates available" "Your system is up to date" -i $updated_icon -u low
         play_sound
     fi
 else 
-    dunstify "Internet unavailable" "Connect to internet to check for updates" -i $updated_icon -u low
+    notify-send "Internet unavailable" "Connect to internet to check for updates" -i $updated_icon -u low
     play_sound
 fi
