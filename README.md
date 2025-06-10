@@ -62,6 +62,11 @@ Here is all the information about my Laptop:
 
 
 ## Screenshots
+
+> [!NOTE]
+> Screenshots are older and i am too lazy to update them :^ 
+
+
 ### Desktop:
 ![Screenshot](screenshots/Shot-2024-09-02-133606.png)
 
